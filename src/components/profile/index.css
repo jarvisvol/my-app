@@ -1,0 +1,38 @@
+.profile-container{
+    width: 82vw;
+    border: 1px solid red;
+    height: 100vh;
+    margin-left: 11px;
+}
+
+.profile-circle{
+    width: 135px;
+    background: red;
+    height: 135px;
+    border-radius: 100px;
+    position: fixed;
+    top: 4px;
+    right: 20px;
+    margin-right: 21px;
+    background-image: url('../../images/profileimg.jpg');
+    background-size: contain;
+    margin-top: 10px;
+}
+
+.uper-section{
+    width: 100%;
+    border: 1px solid;
+    height: 175px;
+}
+
+.position-text{
+    position: fixed;
+    height: 20px;
+    width: 150px;
+    top: 152px;
+    right: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #301944;
+    text-align: center;
+}
