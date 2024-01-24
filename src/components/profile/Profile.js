@@ -8,7 +8,7 @@ export default function Profile() {
         <div className='profile-container'>
             <div className='uper-section'>
                 <div className='profile-circle'>
-                    <span className='position-text'>Full Stack Developer at Xcelorn.nl</span>
+                    <span className='position-text'>Full Stack Developer at Xcelorn.nl xxxxxxxxxxxx</span>
                 </div>
             </div>
             <Divider />
