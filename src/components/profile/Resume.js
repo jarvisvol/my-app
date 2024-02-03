@@ -11,10 +11,10 @@ export default function Resume() {
 
                 </span>
                 <pre style={{ fontSize: '16px', fontWeight: 'bold', color: '#fffff', marginLeft:'154px' }}><h2> My Journey</h2></pre>
-                <span style={{ width: '110px', height: '1px', borderTop: '1px solid black', position: 'relative' }}>
+                <div style={{ width: '390px', height: '1px', borderTop: '1px solid black', position: 'relative', left:'43vw' }}>
 
-                </span>
-                <Divider />
+                </div>
+                {/* <Divider /> */}
             </div>
             <br></br>
             <div>
