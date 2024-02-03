@@ -1,38 +1,66 @@
 .profile-container{
-    width: 82vw;
-    border: 1px solid red;
-    height: 100vh;
+    height: 95vh;
     margin-left: 11px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url('../../images/bck.jpg') ;
+    background-color: transparent;
+
 }
 
-.profile-circle{
-    width: 135px;
-    background: red;
-    height: 135px;
-    border-radius: 100px;
-    position: fixed;
-    top: 4px;
-    right: 20px;
-    margin-right: 21px;
-    background-image: url('../../images/profileimg.jpg');
-    background-size: contain;
-    margin-top: 10px;
-}
-
-.uper-section{
+.profile-container-1{
+    margin-left: 11px;
+    background-repeat: no-repeat;
     width: 100%;
-    border: 1px solid;
-    height: 175px;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+    height: 94vh;
 }
 
-.position-text{
-    position: fixed;
-    height: 20px;
-    width: 150px;
-    top: 152px;
-    right: 36px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #301944;
-    text-align: center;
+.other-container{
+    height: 100vh;
+    border: 1px solid red;
+    position: relative;
+}
+
+
+.my-image{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    top: -15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../images/myimg.jpeg') ;
+    background-color: transparent;
+    box-shadow: 0 -3px 17px 18px rgba(0,0,0,.25);
+
+}
+
+.experince-tag{
+    width: 416px;
+    border-right: 1px solid;
+    height: 138px;
+    position: relative;
+    left: 137px;
+    top: 47px;
+    padding-right: 74px;
+
+
+}
+
+.skills-tag{
+    border: 1px solid #ff8c46;
+    align-items: center;
+    color: #8b8b8b;
+    border-radius: 5px;
+    margin: 10px 5px 0;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 10px;
+    padding: 2px 5px;
 }
