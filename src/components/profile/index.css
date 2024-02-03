@@ -1,5 +1,5 @@
 .profile-container{
-    height: 95vh;
+    height: 58vh;
     margin-left: 11px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,7 +54,7 @@
 }
 
 .skills-tag{
-    border: 1px solid #ff8c46;
+    border: 1px solid #c39a80;
     align-items: center;
     color: #8b8b8b;
     border-radius: 5px;

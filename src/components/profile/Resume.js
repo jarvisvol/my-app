@@ -1,5 +1,5 @@
 import React from 'react'
-import mybullet from '../utils/constants/contants.js'
+import {mybullet, skills} from '../utils/constants/contants.js'
 import { Divider } from 'semantic-ui-react'
 
 export default function Resume() {
@@ -10,7 +10,7 @@ export default function Resume() {
                 <span style={{ width: '110px', height: '1px', borderTop: '1px solid black' }}>
 
                 </span>
-                <pre style={{ fontSize: '16px', fontWeight: 'bold', color: '#fffff' }}><h2> My Joureny</h2></pre>
+                <pre style={{ fontSize: '16px', fontWeight: 'bold', color: '#fffff', marginLeft:'154px' }}><h2> My Journey</h2></pre>
                 <span style={{ width: '110px', height: '1px', borderTop: '1px solid black', position: 'relative' }}>
 
                 </span>
@@ -18,7 +18,7 @@ export default function Resume() {
             </div>
             <br></br>
             <div>
-                <pre>
+                <pre style={{margin:'auto', width: 'fit-content', position: 'relative', left:'44px'}}>
                     <p>I'm a Forbes 30 Under 30 creator and entrepreneur dedicated to building technologies and <br /> empowering people who are laying the foundation for a Golden Age for humanity.</p>
                 </pre>
             </div>
@@ -43,7 +43,7 @@ export default function Resume() {
                         <pre><h4><b>Skills</b></h4></pre>
                         <div>
                         {
-                            projectArr?.map((item) => (
+                            skills?.map((item) => (
                                 <span style={{cursor:'pointer'}}><span className='skills-tag'>{`${item} `}</span></span>
                             ))
                         }

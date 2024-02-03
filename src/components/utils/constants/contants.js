@@ -1,4 +1,4 @@
-const mybullet = [
+export const mybullet = [
     "Developed technical solutions to improve system performance and scalability.",
     "Analyzed user requirements and translated them into technical specifications.",
     "Designed, implemented, tested, and maintained software applications.",
@@ -27,6 +27,25 @@ const mybullet = [
     "Leveraged Agile methodologies to move the development lifecycle rapidly through initial prototyping to enterprise-quality testing and final implementation."
   ];
   
-  // Example: Accessing the first task
-export default mybullet;
+  export const skills = [
+    "JavaScript",
+    "React Framework",
+    "NodeJS",
+    "Python",
+    "DBMS",
+    "DDL",
+    "DML",
+    "MYSQL",
+    "MONGODB",
+    "Nginx Web Server",
+    "Amazon Web Services",
+    "Azure Cloud Services",
+    "CI/CD Jenkins",
+    "Azure DevOps",
+    "Continuous Deployment",
+    "Continuous Integration",
+    "Software Development",
+    "Web Development",
+    "Mobile Application Development"
+  ];
   
