@@ -19,7 +19,11 @@ export default function Resume() {
             <br></br>
             <div>
                 <pre style={{margin:'auto', width: 'fit-content', position: 'relative', left:'44px'}}>
-                    <p>I'm a Forbes 30 Under 30 creator and entrepreneur dedicated to building technologies and <br /> empowering people who are laying the foundation for a Golden Age for humanity.</p>
+                    <p>
+                     Hey, I'm Shubham Singh Dynamic Full Stack Developer with a passion<br/> for crafting innovative and efficient solutions in web development.
+                     With a solid foundation in both <br/> front-end and back-end technologies, Shubham seamlessly navigates the complexities of modern software development <br/> to create robust and user-friendly applications.
+                      Armed with extensive knowledge of <br/> programming languages such as JavaScript, Python, and NodeJS.
+                    </p>
                 </pre>
             </div>
 
