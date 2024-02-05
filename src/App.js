@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from './components/Navbar/pages/Navbar'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './common_css/index.css'
 import Profile from './components/profile/Profile'
 import Chart from './components/Project/Chart'
@@ -7,10 +7,12 @@ import Chart from './components/Project/Chart'
 
 export default function App() {
   return (
-    <div className='app-container' style={{display:'flex'}}>
-    <Profile/>
-    {/* <Chart/> */}
-    </div>
+    <BrowserRouter>
+       <Routes>
+        <Route path="/"  element={ <Profile/>}/>
+        <Route path="/match-data"  element={ <Chart/>}/>
+       </Routes>
+    </BrowserRouter>
   )
 }
 

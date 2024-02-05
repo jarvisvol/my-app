@@ -1,9 +1,8 @@
 import React from 'react'
 import {mybullet, skills} from '../utils/constants/contants.js'
-import { Divider } from 'semantic-ui-react'
 
 export default function Resume() {
-    const projectArr = ['project-1', 'project-2', 'project-3', 'project-4', 'project-6'];
+    const projectArr = ['3D-Data Visulization', 'project-2', 'project-3', 'project-4', 'project-6'];
     return (
         <div style={{ marginTop: '100px', textAlign: 'center' }}>
             <div >
@@ -14,7 +13,6 @@ export default function Resume() {
                 <div style={{ width: '390px', height: '1px', borderTop: '1px solid black', position: 'relative', left:'43vw' }}>
 
                 </div>
-                {/* <Divider /> */}
             </div>
             <br></br>
             <div>
@@ -37,7 +35,7 @@ export default function Resume() {
                         <pre><h4><b>Live Projects</b></h4></pre>
                         {
                             projectArr?.map((item) => (
-                                <pre style={{cursor:'pointer'}}><a>{item}</a></pre>
+                                <pre style={{cursor:'pointer'}}><a href='/match-data'>{item}</a></pre>
                             ))
                         }
                     </div>
