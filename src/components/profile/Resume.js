@@ -20,7 +20,7 @@ export default function Resume() {
                     <p>
                      Hey, I'm Shubham Singh Dynamic Full Stack Developer with a passion<br/> for crafting innovative and efficient solutions in web development.
                      With a solid foundation in both <br/> front-end and back-end technologies, Shubham seamlessly navigates the complexities of modern software development <br/> to create robust and user-friendly applications.
-                      Armed xxxxxxxxxxxxxxxxxxx with extensive knowledge of <br/> programming languages such as JavaScript, Python, and NodeJS.
+                      Armed with extensive knowledge of <br/> programming languages such as JavaScript, Python, and NodeJS.
                     </p>
                 </pre>
             </div>
