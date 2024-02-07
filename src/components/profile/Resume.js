@@ -19,7 +19,7 @@ export default function Resume() {
                 <pre style={{margin:'auto', width: 'fit-content', position: 'relative', left:'44px'}}>
                     <p>
                      Hey, I'm Shubham Singh Dynamic Full Stack Developer with a passion<br/> for crafting innovative and efficient solutions in web development.
-                     With a solid foundation in both <br/> front-end and back-end technologies, Shubham seamlessly navigates the complexities of modern software development <br/> to create robust and user-friendly applications.
+                     With a solid foundation in both <br/> front-end and back-end technologies, seamlessly navigates the complexities of modern software development <br/> to create robust and user-friendly applications.
                       Armed with extensive knowledge of <br/> programming languages such as JavaScript, Python, and NodeJS.
                     </p>
                 </pre>
