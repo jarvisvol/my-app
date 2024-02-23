@@ -47,7 +47,7 @@ export default function Resume() {
                         <pre><h4><b>Live Projects</b></h4></pre>
                         {
                             projectArr?.map((item, i) => (
-                                <pre onClick={(i)=>downloadAPK()} style={{cursor:'pointer'}}><a href={`/match-data`}>{item}</a></pre>
+                                <pre onClick={(i)=>downloadAPK()} style={{cursor:'pointer'}}><a href={i === 0 ? '/match-data' : null} >{item}</a></pre>
                             ))
                         }
                     </div>
