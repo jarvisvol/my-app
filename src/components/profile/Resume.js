@@ -2,7 +2,19 @@ import React from 'react'
 import {mybullet, skills} from '../utils/constants/contants.js'
 
 export default function Resume() {
-    const projectArr = ['3D-Data Visulization', 'project-2', 'project-3', 'project-4', 'project-6'];
+    const projectArr = ['Data Visulization', 'car book app', 'project-3', 'project-4', 'project-6'];
+
+    const downloadAPK = (i) =>{
+        if(i==1){
+            const apkUrl = '/var/www/html/my-app.apk';
+   	 		const link = document.createElement('a');
+    		link.href = apkUrl;
+    		link.download = 'your_app_name.apk';
+    		document.body.appendChild(link);
+   			link.click();
+    		document.body.removeChild(link);
+        }
+    }
     return (
         <div style={{ marginTop: '100px', textAlign: 'center' }}>
             <div >
@@ -34,8 +46,8 @@ export default function Resume() {
                     <div style={{ marginTop: '103px' }}>
                         <pre><h4><b>Live Projects</b></h4></pre>
                         {
-                            projectArr?.map((item) => (
-                                <pre style={{cursor:'pointer'}}><a href='/match-data'>{item}</a></pre>
+                            projectArr?.map((item, i) => (
+                                <pre onClick={(i)=>downloadAPK()} style={{cursor:'pointer'}}><a href={`/match-data`}>{item}</a></pre>
                             ))
                         }
                     </div>
