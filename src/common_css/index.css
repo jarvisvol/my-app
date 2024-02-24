@@ -1,10 +1,71 @@
-.size-14{
+.size-14 {
     font-size: 16px;
     font-style: Poopins;
 }
 
-.left-container{
+.left-container {
     display: block;
     width: 20vw;
     border: 1px solid;
+}
+
+@media (max-width: 768px) {
+
+    /* CSS rules for small screens */
+    .my-image {
+        top: -106px !important;
+    }
+
+    .profile-image-position {
+        position: relative;
+        left: 18vw !important;
+        /* top: 332px !important; */
+
+    }
+
+    .summuray-container {
+        position: absolute !important;
+        left: 0px !important;
+        margin-top: 51px;
+    }
+
+    .whole-resum-container {
+        display: block !important;
+    }
+
+    .experince-tag {
+        justify-self: flex-end;
+        width: auto !important;
+        height: auto;
+        position: auto !important;
+        top: auto !important;
+        padding-right: 0px !important;
+        margin-top: 40px;
+    }
+
+    .skills-wala-container {
+        position: static !important;
+        height: auto;
+        margin-top: 0px;
+        padding-left: 0px !important;
+    }
+
+    .project-list-container {
+        margin-top: 50px !important;
+    }
+
+    .my-jounery-tag {
+        margin-left: 0px !important;
+        margin-top: 40px !important;
+    }
+
+    .boder-of-jurney-tag {
+        width: 306px !important;
+        height: 1px;
+        border-top: 1px solid black;
+        position: relative;
+        left: 0px !important;
+        /* padding-left: 10px; */
+        margin-left: 66px;
+    }
 }
