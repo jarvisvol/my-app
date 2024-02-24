@@ -13,7 +13,8 @@
 
     /* CSS rules for small screens */
     .my-image {
-        top: -106px !important;
+        top: -149px !important;
+        right: 16px;
     }
 
     .profile-image-position {
