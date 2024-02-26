@@ -28,13 +28,18 @@ export const mybullet = [
   ];
   
   export const skills = [
+    "HTML5",
+    "CSS",
     "JavaScript",
-    "React Framework",
+    "React",
+    "React Native",
     "NodeJS",
+    "ExpressJs",
     "Python",
-    "DBMS",
     "DDL",
     "DML",
+    "SQL",
+    "NOSQL",
     "MYSQL",
     "MONGODB",
     "Nginx Web Server",
@@ -42,10 +47,23 @@ export const mybullet = [
     "Azure Cloud Services",
     "CI/CD Jenkins",
     "Azure DevOps",
-    "Continuous Deployment",
-    "Continuous Integration",
-    "Software Development",
-    "Web Development",
-    "Mobile Application Development"
+    "Quick Learner",
+    "Critical Thinking",
+    "Problem Solving",
   ];
+
+export const cricketMatches = [
+  { Teams: "India vs Pakistan", Date: "2024-03-01", Highlights: "Player X awarded Man of the Match" },
+  { Teams: "Australia vs England", Date: "2024-03-03", Highlights: "Player Y scored a century" },
+  { Teams: "South Africa vs New Zealand", Date: "2024-03-06", Highlights: "Player Z took a hat-trick" },
+  { Teams: "West Indies vs Sri Lanka", Date: "2024-03-09", Highlights: "Player W hit the winning runs" },
+  { Teams: "Bangladesh vs Afghanistan", Date: "2024-03-12", Highlights: "Player P scored 5 sixes" },
+  { Teams: "Pakistan vs Australia", Date: "2024-03-15", Highlights: "Player Q took 5 wickets" },
+  { Teams: "England vs South Africa", Date: "2024-03-18", Highlights: "Player R hit the fastest fifty" },
+  { Teams: "New Zealand vs West Indies", Date: "2024-03-21", Highlights: "Player S achieved a run-out" },
+  { Teams: "India vs Sri Lanka", Date: "2024-03-24", Highlights: "Player T scored a double century" },
+  { Teams: "Australia vs Bangladesh", Date: "2024-03-27", Highlights: "Player U hit the winning six" },
+  { Teams: "Afghanistan vs Pakistan", Date: "2024-03-30", Highlights: "Player V took a hat-trick" }
+];
+
   
