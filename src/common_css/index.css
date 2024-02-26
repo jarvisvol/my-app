@@ -17,7 +17,7 @@
 
     /* CSS rules for small screens */
     .my-image {
-        top: -149px !important;
+        top: -249px !important;
         right: 16px;
     }
 
@@ -65,7 +65,7 @@
     }
 
     .boder-of-jurney-tag {
-        width: 306px !important;
+        width: 250px !important;
         height: 1px;
         border-top: 1px solid black;
         position: relative;
