@@ -41,8 +41,8 @@ export default function Resume() {
                 <div className='experince-tag'>
                     <h4>Experince</h4>
                     <b>Agile Cockpit Software Pvt Ltd- Technical Developer</b>
-                    <span>Gurugram India</span>
-                    <i>12/22- current</i>
+                    <span style={{marginLeft:'5px'}}>Gurugram India </span>
+                    <i>05/22- current</i>
                     <div className='project-list-container' style={{ marginTop: '103px' }}>
                         <span><h4><b>Live Projects</b></h4></span>
                         {

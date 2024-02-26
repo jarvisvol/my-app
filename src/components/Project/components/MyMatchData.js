@@ -19,37 +19,44 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top'
-    },
-    title: {
-      display: true,
-      text: 'IPL Matches',
-    },
-  },
-};
 
-const labels = ['1st-Over', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = [
+  '1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '10th',
+  '11th', '12th', '13th', '14th', '15th', '16th', '17th', '18th', '19th', '20th'
+];
+ 
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [1, 2, 3, 4, 5],
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+export default function MyMatchData({teams, team1, team2}) {
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top'
+      },
+      title: {
+        display: true,
+        text: teams,
+      },
     },
-    {
-      label: 'Dataset 2',
-      data: [6, 7, 8, 9, 10],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
+  };
 
-export default function MyMatchData() {
-  return <Bar options={options} data={data} />;
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: team1,
+        data: [3, 4, 5, 20, 15, 13, 16, 15, 24, 3, 6, 7, 5, 9, 7, 4, 6, 7, 12, 22],
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+      {
+        label: team2,
+        data: [2, 3, 5, 11, 10, 13, 16, 15, 10, 3, 4, 10, 2, 5, 3, 2, 3, 17, 18, 15],
+        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+      },
+    ],
+  };
+
+  return (
+    <Bar options={options} data={data} />
+  );
 }

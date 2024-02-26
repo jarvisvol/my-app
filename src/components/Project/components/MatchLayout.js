@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {cricketMatches} from '../../utils/constants/contants.js'
 import PopulerMatchCard from './PopulerMatchCard.js';
 import MyMatchData from './MyMatchData.js'
@@ -6,7 +6,10 @@ import MyMatchData from './MyMatchData.js'
 const matchList = [1, 2, 3, 45, 6, 7, 8, 9];
 
 export default function MatchLayout() {
-    console.log(cricketMatches);
+
+    const [selectedMatch, setSelectedMatch] = useState(0);
+
+
     return (
         <div style={{ display: 'flex',   }}>
             <div className='left-container'>
@@ -23,15 +26,15 @@ export default function MatchLayout() {
                 }
             </div>
             <div className='papuler-matches' style={{display:'-webkit-box', overflow:'auto', width:'78%', marginLeft:'12px', boxShadow:'1px 5px 14px', height:'129px', marginTop:'14px'}}>
-                <p style={{margin:'auto', padding:'11px'}}>Populer Matches :</p>
+                <p style={{margin:'auto', padding:'11px'}}>Popular Matches :</p>
                 {
                     cricketMatches?.map((item, key) => (
-                        <PopulerMatchCard key={key} team={item.Teams} date={item.Date} highlight={item.Highlights}/>
+                        <PopulerMatchCard key={key} matchIndex={key} team={item.Teams} date={item.Date} highlight={item.Highlights} setSelectedMatch={setSelectedMatch} />
                     ))
                 }
             </div>
             <div className='match-graph-container'>
-                <MyMatchData/>
+                <MyMatchData teams={cricketMatches[selectedMatch].Teams} team1 = {cricketMatches[selectedMatch].team1} team2 = {cricketMatches[selectedMatch].team2}/>
             </div>
         </div>
     )
