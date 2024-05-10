@@ -22,7 +22,7 @@ export default function Resume() {
 
                 </span>
                 <span className='my-jounery-tag' style={{ fontSize: '16px', fontWeight: 'bold', color: '#fffff', marginLeft: '154px' }}><h2>My Journey </h2></span>
-                <div className='boder-of-jurney-tag' style={{ width: '390px', height: '1px', borderTop: '1px solid black', position: 'relative', left: '36vw' }}>
+                <div className='boder-of-jurney-tag' style={{ width: '390px', height: '1px', borderTop: '1px solid black', position: 'relative', left: '39vw' }}>
 
                 </div>
             </div>
@@ -56,7 +56,7 @@ export default function Resume() {
                     </div>
 
                 </div>
-                <div className='skills-wala-container' style={{ position: 'relative', left: '66vw', height: '130px', marginTop: '39px', paddingLeft: '60px' }}>
+                <div className='skills-wala-container' style={{ position: 'relative', left: '71vw', height: '130px', marginTop: '39px', paddingLeft: '60px' }}>
                     <span><h4><b>Skills</b></h4></span>
                     <div>
                         {
