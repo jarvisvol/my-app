@@ -3,7 +3,7 @@ import { mybullet, skills } from '../utils/constants/contants.js'
 import { Link } from "react-router-dom";
 
 export default function Resume() {
-    const projectArr = ['Data Visulization', 'car book app', 'project-3', 'project-4', 'project-6'];
+    const projectArr = ['Data Visulization', 'car book app', 'work-managment-system', 'project-4', 'project-6'];
 
     const downloadAPK = () => {
         const apkUrl = process.env.PUBLIC_URL + '/APK_folder/app-release.apk';
@@ -47,8 +47,9 @@ export default function Resume() {
                         <span><h4><b>Live Projects</b></h4></span>
                         {
                             projectArr?.map((item, i) => (
-                                <div key={i} style={{ cursor: 'pointer' }}> {
-                                    i === 0 ? <Link to={'/match-data'} > {item} </Link> : 
+                                <div key={i} style={{ cursor: 'pointer' }}> { 
+                                    i === 0 ? <Link to={'/match-data'} > {item} </Link>
+                                    : item === "work-managment-system" ? <Link to={'/workitems'} > {item} </Link> :
                                     <span style={{textDecoration:'underline', color: 'blue', cursor: 'pointer', paddingTop: '5px'}} onClick={() => downloadAPK()} > {item} </span>
                                 } </div>
                             ))
