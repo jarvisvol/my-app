@@ -1,19 +1,19 @@
 import React from 'react'
 import { mybullet, skills } from '../utils/constants/contants.js'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Resume() {
-    const projectArr = ['Data Visulization', 'car book app', 'work-managment-system', 'project-4', 'project-6'];
+    // const projectArr = ['Data Visulization', 'car book app', 'work-managment-system', 'project-4', 'project-6'];
 
-    const downloadAPK = () => {
-        const apkUrl = process.env.PUBLIC_URL + '/APK_folder/app-release.apk';
-        const link = document.createElement('a');
-        link.href = apkUrl;
-        link.download = 'app-release.apk';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
+    // const downloadAPK = () => {
+    //     const apkUrl = process.env.PUBLIC_URL + '/APK_folder/app-release.apk';
+    //     const link = document.createElement('a');
+    //     link.href = apkUrl;
+    //     link.download = 'app-release.apk';
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     document.body.removeChild(link);
+    // }
 
     return (
         <div style={{ marginTop: '100px', textAlign: 'center' }}>
@@ -43,7 +43,7 @@ export default function Resume() {
                     <b>Agile Cockpit Software Pvt Ltd- Technical Developer</b>
                     <span style={{marginLeft:'5px'}}>Gurugram India </span>
                     <i>05/22- current</i>
-                    <div className='project-list-container' style={{ marginTop: '103px' }}>
+                    {/* <div className='project-list-container' style={{ marginTop: '103px' }}>
                         <span><h4><b>Live Projects</b></h4></span>
                         {
                             projectArr?.map((item, i) => (
@@ -54,7 +54,7 @@ export default function Resume() {
                                 } </div>
                             ))
                         }
-                    </div>
+                    </div> */}
 
                 </div>
                 <div className='skills-wala-container' style={{ position: 'relative', left: '71vw', height: '130px', marginTop: '39px', paddingLeft: '60px' }}>
