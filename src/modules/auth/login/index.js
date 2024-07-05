@@ -7,6 +7,7 @@ import {
 const mapStateToProp = (state) => {
     return {
         status: state.userReducer.status,
+        accessToken: state.userReducer.loginData
     }
 }
 

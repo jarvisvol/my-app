@@ -5,7 +5,8 @@ const initialState = {
     data:[],
     isLoading: false,
     error: '',
-    status: ''
+    status: '',
+    loginData: {}
 }
 
 const userReducer  = (state = initialState, action) =>{
@@ -27,6 +28,26 @@ const userReducer  = (state = initialState, action) =>{
                 ...state,
                 isLoading: false,
                 error: action.result,
+                status: action.type
+            }
+        case types.USER_LOGIN:
+            return {
+                ...state,
+                isLoading: true,
+                status: action.type
+            }
+        case types.USER_LOGIN_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                loginData: action.result.data.data,
+                status: action.type
+            }
+        case types.USER_LOGIN_FAIL:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.error,
                 status: action.type
             }
         default:

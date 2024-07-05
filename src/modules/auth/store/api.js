@@ -3,6 +3,8 @@ import store from '../../../Utils/store/store';
 import {
     userRegisterSuccess,
     userRegisterFail,
+    userLoginSuccess,
+    userLoginFail,
 } from './action'
 
 
@@ -12,5 +14,14 @@ export const registerUser = async(payload) => {
         store.dispatch(userRegisterSuccess(result.data));
     } catch (error) {
         store.dispatch(userRegisterFail('result'))
+    }
+}
+
+export const userLogin  = async(payload) => {
+    try {
+        const respo = await HTTP.post('user/login', payload);
+        store.dispatch(userLoginSuccess(respo));
+    } catch (error) {
+        store.dispatch(userLoginFail)
     }
 }
