@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Input, Label } from 'semantic-ui-react'
+import { Button, Label } from 'semantic-ui-react'
 import './css/index.css'
+import { Link } from 'react-router-dom'
+import Loader from '../../../components/common/Loader'
 
 export default function Login({userLogin, status, accessToken}) {
   const [formobj, setformobj] = useState({
@@ -19,7 +21,7 @@ export default function Login({userLogin, status, accessToken}) {
       default:
         break;
     }
-  }, [status])
+  }, [status, accessToken])
 
   const loginHandler = () => {
     // console.log(formobj, userLogin);
@@ -28,12 +30,17 @@ export default function Login({userLogin, status, accessToken}) {
 
   return (
     <div className='main-container'>
+      <Loader/>
       <div className='field-container'>
-      <Label >Email</Label>
-      <Input onChange={(e) => {setformobj({...formobj, email:e.target.value})}} type='text' placeholer='enter the email'/>
-      <Label>Password</Label>
-      <Input onChange={(e) => {setformobj({...formobj, password:e.target.value})}} type='text' placeholer='enter the password'/>
-      <Button onClick={() => loginHandler()} style={{marginTop:'10px'}}>Login</Button>
+      {
+        formobj.email.length || formobj.password.length ? "" : <li className='warning-text'>Please enter the details</li>
+      }
+      <Label className='label field' >Email</Label>
+      <input className='input-field' onChange={(e) => {setformobj({...formobj, email:e.target.value})}} type='text' placeholer='enter the email'/>
+      <Label className='label field'>Password</Label>
+      <input className='input-field' onChange={(e) => {setformobj({...formobj, password:e.target.value})}} type='password' placeholer='enter the password'/>
+      <Button className='login-btn' onClick={() => loginHandler()} style={{marginTop:'10px'}}>Sign in</Button>
+      <Link to={'/register'} className="link-text">Sign up</Link>
       </div>
     </div>
   )

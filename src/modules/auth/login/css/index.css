@@ -5,4 +5,87 @@
 
 .field-container{
     margin: auto;
+    margin: auto;
+    /* border: 1px solid #657878; */
+    width: 23%;
+    /* text-align: center; */
+    justify-content: space-between;
+    background: #d7eded;
+    box-shadow: -7px 6px 27px 0px #d7eded;
+    padding: 96px 43px;
+    border-radius: 16px;
+    position: relative;
+    top: 200px;
+    left: 451px;
+}
+
+.login-btn{
+    cursor: pointer;
+    width: 35%;
+    border-radius: 10px;
+    border: 1px solid;
+    position: relative;
+    left: 115px;
+    top: 40px;
+    height: 40px;
+    border-color: #5ab7bc;
+    background: #fbf7f7;
+    box-shadow: 1px 3px 12px 2px darkseagreen;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.login-btn:hover{
+    font-size: 23px;
+    border: 1px sloid black;
+    /* background: green; */
+}
+
+.label{
+    font-size: 26px;
+    font-weight: 500;
+    margin: 17px 0px 31px 16px;
+
+}
+
+.input-field{
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 21px;
+    border: 1px solid;
+    height: 44px;
+    width: 93%;
+    border: 1px solid #38357a;
+    margin-left: 14px;
+    position: relative;
+    top:-11px;
+    padding-left: 17px;
+    font-size: 17px;
+}
+
+.input-field:hover{
+    border: 1px solid hsl(243, 39%, 34%);
+    height: 50px;
+}
+
+.link-text{
+    border: none;
+    border: none;
+    text-decoration: none;
+    float: right;
+    font-size: 14px;
+}
+
+.link-text:hover{
+    color: rgb(14, 129, 129);
+    font-size: 15px;
+}
+
+.warning-text{
+    font-size: 14px;
+    position: relative;
+    left: 22px;
+    color: red;
 }
