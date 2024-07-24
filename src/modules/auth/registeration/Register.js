@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button, Input, Label, Loader, Dimmer } from 'semantic-ui-react'
 
 export default function Register({ registerUser, isLoading, status }) {
+
+  const navigate = useNavigate();
+
   const [formObj, setformObj] = useState({
     name: "",
     email: "",
@@ -14,7 +18,7 @@ export default function Register({ registerUser, isLoading, status }) {
     switch (status) {
       case 'REGISTER_USER_SUCCESS':
         // location.href('/login')
-        window.location.assign("/login")
+        navigate("/email-verification")
         break;
     
       default:

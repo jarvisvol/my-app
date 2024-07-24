@@ -6,7 +6,9 @@ const initialState = {
     isLoading: false,
     error: '',
     status: '',
-    loginData: {}
+    loginData: {},
+    registeruserDta: {}
+
 }
 
 const userReducer  = (state = initialState, action) =>{
@@ -15,11 +17,13 @@ const userReducer  = (state = initialState, action) =>{
             return {
                 ...state,
                 isLoading: true,
-                status: action.type
+                status: action.type,
+                registeruserDta: action.payload.email
             }
         case types.REGISTER_USER_SUCCESS:
             return {
-                data: action.result.data,
+                ...state,
+                data: action.result,
                 // isLoading: false,
                 status: action.type
             }
@@ -49,6 +53,32 @@ const userReducer  = (state = initialState, action) =>{
                 isLoading: false,
                 error: action.error,
                 status: action.type
+            }
+        case types.RESEND_OTP_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type
+            }
+
+        case types.RESEND_OTP_FAILURE:
+            return {
+                ...state,
+                error: action.error,
+                isLoading: false
+            }
+        case types.OTP_VERIFY_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type
+            }
+
+        case types.OTP_VERIFY_FAILURE:
+            return {
+                ...state,
+                error: action.error,
+                isLoading: false
             }
         default:
             return state;

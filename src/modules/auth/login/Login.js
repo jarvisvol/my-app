@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Input, Label } from 'semantic-ui-react'
+import './css/index.css'
 
 export default function Login({userLogin, status, accessToken}) {
   const [formobj, setformobj] = useState({
@@ -26,12 +27,14 @@ export default function Login({userLogin, status, accessToken}) {
   }
 
   return (
-    <div>
+    <div className='main-container'>
+      <div className='field-container'>
       <Label >Email</Label>
       <Input onChange={(e) => {setformobj({...formobj, email:e.target.value})}} type='text' placeholer='enter the email'/>
       <Label>Password</Label>
       <Input onChange={(e) => {setformobj({...formobj, password:e.target.value})}} type='text' placeholer='enter the password'/>
       <Button onClick={() => loginHandler()} style={{marginTop:'10px'}}>Login</Button>
+      </div>
     </div>
   )
 }

@@ -5,6 +5,10 @@ import {
     userRegisterFail,
     userLoginSuccess,
     userLoginFail,
+    verifyOTPSuccess,
+    verifyOTPFailure,
+    resendOtpSuccess,
+    resendOtpFailure,
 } from './action'
 
 
@@ -24,4 +28,24 @@ export const userLogin  = async(payload) => {
     } catch (error) {
         store.dispatch(userLoginFail)
     }
+}
+
+export const otpVerify = async(payload) => {
+    try {
+        const result = await HTTP.post('user/check-otp', payload);
+        store.dispatch(verifyOTPSuccess(result));
+    } catch (error) {
+        store.dispatch(verifyOTPFailure)
+    }
+
+}
+
+export const resendOtp = async(payload) => {
+    try {
+        const result = await HTTP.post('user/resend-otp', payload);
+        store.dispatch(resendOtpSuccess(result));
+    } catch (error) {
+        store.dispatch(resendOtpFailure(error));
+    }
+
 }

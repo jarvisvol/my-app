@@ -6,6 +6,7 @@ import MatchLayout from './components/Project/components/MatchLayout';
 import Todos from './components/Project/project-3/Todos';
 import RegisterComponent from './modules/auth/registeration/index';
 import LoginComponent from './modules/auth/login';
+import VerifyOtpCompo from './modules/auth/verifyOTP/component/index';
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/workitems" setPosn={setPosn} element={<Todos knightPosition={posn} handleSqaureClick={handleSqaureClick}/>} />
         <Route path="/register" element={<RegisterComponent />} />
         <Route path="/login" element={<LoginComponent />} />
+        <Route path="/email-verification" element={<VerifyOtpCompo />} />
       </Routes>
     </BrowserRouter>
   )
