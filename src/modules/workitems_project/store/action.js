@@ -1,11 +1,10 @@
-import * as types from './actionTypes.ks'
+import * as types from './actionTypes.js'
 import * as API from './api';
 
 export const getPhasesList = (params) => {
-    const req = API.getWorkItemList(params);
+    const req = API.getPhasesList(params);
     return {
         type: types.GET_PHASES_LIST,
-        request: req
     }
 }
 

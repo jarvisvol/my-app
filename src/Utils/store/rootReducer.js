@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import userReducer from "../../modules/auth/store/reducer";
-import { phasesreducer } from "../../modules/workitems_project/store.js/reducer";
+import { phasesReducer } from "../../modules/workitems_project/store/reducer";
 
 const rootReducer = combineReducers({
     userReducer,
-    phasesreducer
+    phasesReducer
     
 })
 

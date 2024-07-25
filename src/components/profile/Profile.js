@@ -21,12 +21,12 @@ export default function Profile() {
 
   return (
     <div className='profile-container-1' ref={scrollContainerRef} onScroll={handleScroll}>
-      <div class="ui segment">
+      {/* <div class="ui segment">
         <p></p>
         <div class="ui active dimmer">
           <div class="ui loader"></div>
         </div>
-      </div>
+      </div> */}
 
       <div className='profile-container' style={{ backgroundPosition: `0 ${first > 0 ? -(first + 1) * 2 : 1}px` }}>
         <MyImage topPosition={first} />

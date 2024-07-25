@@ -8,7 +8,7 @@ const initialState = {
     isAuthentecated: true
 };
 
-export const phasesreducer = (state = initialState, action) => {
+export const phasesReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.GET_PHASES_LIST_SUCCESS:
             return {

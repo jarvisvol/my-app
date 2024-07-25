@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Button, Label } from 'semantic-ui-react'
 import './css/index.css'
 import { Link } from 'react-router-dom'
-import Loader from '../../../components/common/Loader'
 
 export default function Login({userLogin, status, accessToken}) {
+  
   const [formobj, setformobj] = useState({
     email:'',
     password:''
@@ -14,7 +14,6 @@ export default function Login({userLogin, status, accessToken}) {
     switch (status) {
       case 'USER_LOGIN_SUCCESS':
         window.localStorage.setItem('accessToken' ,accessToken.access_token)
-        // console.log(accessToken);
         window.location.assign('/')
         break;
     
@@ -24,13 +23,11 @@ export default function Login({userLogin, status, accessToken}) {
   }, [status, accessToken])
 
   const loginHandler = () => {
-    // console.log(formobj, userLogin);
     userLogin(formobj);
   }
 
   return (
     <div className='main-container'>
-      <Loader/>
       <div className='field-container'>
       {
         formobj.email.length || formobj.password.length ? "" : <li className='warning-text'>Please enter the details</li>
