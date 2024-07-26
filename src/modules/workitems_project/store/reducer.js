@@ -5,7 +5,8 @@ const initialState = {
     status: '',
     isLoading: false,
     phases: [],
-    isAuthentecated: true
+    isAuthentecated: true,
+    workitems: []
 };
 
 export const phasesReducer = (state = initialState, action) => {
@@ -29,6 +30,45 @@ export const phasesReducer = (state = initialState, action) => {
                 ...state,
                 isLoading: true,
                 status: action.type
+            }
+        case types.GET_WORKITEM_LIST:
+            return {
+                ...state,
+                isLoading: true,
+                status: action.type
+            }
+        case types.GET_WORKITEM_LIST_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
+                workitems: action.result.data.data
+            }
+        case types.GET_WORKITEM_LIST_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
+                error: action.error
+            }
+        case types.UPDATE_WORKITEM_PHASE:
+            return {
+                ...state,
+                isLoading: true,
+                status: action.type,
+            }
+        case types.UPDATE_WORKITEM_PHASE_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
+                error: action.error
+            }
+        case types.UPDATE_WORKITEM_PHASE_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
             }
         default:
             return state;
