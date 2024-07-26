@@ -20,6 +20,12 @@ export default function Dashboard({phases, getPhasesList, getWorkitemList, statu
       case 'GET_PHASES_LIST_SUCCESS':
         console.log(phases,"llplplppl");
         var samArr = [];
+        samArr.push({
+          name: "Unassigned",
+          value: "Unassigned",
+          id:null
+          
+        })
         phases?.map((item) => {
          return samArr.push({
             text: item.name,
@@ -52,14 +58,6 @@ export default function Dashboard({phases, getPhasesList, getWorkitemList, statu
   return (
     <DndProvider backend={HTML5Backend}>
     <div style={{display:'flex'}}>
-      <div className='backlog-container' >
-          {/* {
-           samss.map((item, k) => (
-            <WorkitemCard x={item} y={k} key={k}/>
-           ))
-          } */}
-          
-      </div>
       <Backlog pasedPhases={pasedPhases} parsedWorkItems={parsedWorkItems} setParsedWorkItems={setParsedWorkItems} updateWorkitemPhase={updateWorkitemPhase}/>
     </div>
     </DndProvider>
@@ -71,11 +69,11 @@ function Backlog({pasedPhases, parsedWorkItems, setParsedWorkItems, updateWorkit
     <>
       {
         pasedPhases?.map((item, k) => (
-          <PhaseContainer key={k} title={item.name} x={item.id} y = {item.name} setParsedWorkItems={setParsedWorkItems} parsedWorkItems={parsedWorkItems} updateWorkitemPhase={updateWorkitemPhase} >
+          <PhaseContainer key={k} title={item.name} dashboard_phase_id={item.id} setParsedWorkItems={setParsedWorkItems} parsedWorkItems={parsedWorkItems} updateWorkitemPhase={updateWorkitemPhase} >
             <div className='wi-container'>
             {
               parsedWorkItems?.map((itemY, j) => (
-              item.id == itemY.dashboard_phase_id ? <WorkitemCard itemDetails={itemY} x={itemY} y={j} key={j}/> : null
+              item.id == itemY.dashboard_phase_id ? <WorkitemCard itemDetails={itemY} key={j}/> : null
               ))
             } 
             </div>

@@ -2,29 +2,28 @@ import React from 'react'
 import { useDrop } from 'react-dnd'
 
 
-export default function PhaseContainer({title, children, x, y, setParsedWorkItems, parsedWorkItems, updateWorkitemPhase}) {
+export default function PhaseContainer({title, children, dashboard_phase_id, setParsedWorkItems, parsedWorkItems, updateWorkitemPhase}) {
   const [{ isOver}, drop] = useDrop(() => ({
       accept: 'wi',
-      drop: (item) => moveWi(x, y, item),
+      drop: (item) => moveWi(dashboard_phase_id, item),
       collect: monitor => ({
         isOver: !!monitor.isOver(),
       }),
-    }), [x, y])
+    }), [dashboard_phase_id])
 
-    const moveWi = (x, y, item) => {
+    const moveWi = (dashboard_phase_id, item) => {
       const arr = parsedWorkItems.map((wi) => {
         if (wi.id === item.id){
-          wi.dashboard_phase_id = x
+          wi.dashboard_phase_id = dashboard_phase_id
         }
         return wi;
       })
       setParsedWorkItems(arr);
-      console.log(item);
-      updateWorkitemPhase({id: item.id, dashboard_phase_id: x, name: item.name, description: item.description});
+      updateWorkitemPhase({id: item.id, dashboard_phase_id: dashboard_phase_id, name: item.name, description: item.description});
     }
 
   return (
-    <div ref={drop} className='phase-container'>
+    <div ref={drop} className='phase-container' style={{width: title == "Unassigned" ? '33%' : '22%'}}>
        <div style={{textAlign:'center',height: '30px', width: '100%', borderBottom: '1px solid', fontWeight:500, fontSize:'17px'}}>
         {title}
        </div>
