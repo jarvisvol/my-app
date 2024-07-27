@@ -23,7 +23,7 @@ export default function PhaseContainer({title, children, dashboard_phase_id, set
     }
 
   return (
-    <div ref={drop} className='phase-container' style={{width: title == "Unassigned" ? '33%' : '22%'}}>
+    <div ref={drop} className='phase-container' style={{width: title === "Unassigned" ? '33%' : '22%'}}>
        <div style={{textAlign:'center',height: '30px', width: '100%', borderBottom: '1px solid', fontWeight:500, fontSize:'17px'}}>
         {title}
        </div>

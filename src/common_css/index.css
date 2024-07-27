@@ -120,7 +120,6 @@
 
 .work-item-card{
     border: 1px solid #0eb7e0;
-    height: 30px;
     width: 200px;
     opacity: 1;
     font-size: 14px;
@@ -129,4 +128,25 @@
     box-shadow: 3px 4px 3px 2px #c6dce2;
     border-radius: 10px;
 
+}
+
+.nav-container{
+    width: 98%;
+    height: 50px;
+    position: sticky;
+    top: 0px;
+    padding: 4px;
+    background: #e0e8e7;
+    border-radius: 10px;
+    border: 1px solid #d5e8e8;
+    margin-bottom: 13px;
+    box-shadow: 2px 6px 9px 2px #6e9d9d;
+    margin-left: 22px;
+    z-index: 3;
+}
+
+.popup-container{
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
 }

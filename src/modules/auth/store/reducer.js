@@ -7,7 +7,8 @@ const initialState = {
     error: '',
     status: '',
     loginData: {},
-    registeruserDta: {}
+    registeruserDta: {},
+    userDetails: {}
 
 }
 
@@ -78,6 +79,25 @@ const userReducer  = (state = initialState, action) =>{
             return {
                 ...state,
                 error: action.error,
+                isLoading: false
+            }
+        case types.GET_USER_DETAIL:
+            return {
+                ...state,
+                isLoading: true
+            }
+        case types.GET_USER_DETAIL_FAILURE:
+            console.log(action);
+            return {
+                ...state,
+                error: action.error.message,
+                isLoading: false,
+                isAuthenticated: action.error.message === "Not Authorized" ? false : true
+            }
+        case types.GET_USER_DETAIL_SUCCESS:
+            return {
+                ...state,
+                userDetails: action.result.data,
                 isLoading: false
             }
         default:

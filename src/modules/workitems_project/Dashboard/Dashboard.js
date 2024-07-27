@@ -4,8 +4,9 @@ import PhaseContainer from '../../../components/common/PhaseContainer';
 import WorkitemCard from '../../../components/common/WorkitemCard';
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import { Dimmer, Loader } from 'semantic-ui-react';
 
-export default function Dashboard({phases, getPhasesList, getWorkitemList, status, workitems, updateWorkitemPhase}) {
+export default function Dashboard({phases, getPhasesList, getWorkitemList, status, workitems, updateWorkitemPhase, isLoading}) {
   const [pasedPhases, setPhases] = useState([]);
   
   const [parsedWorkItems, setParsedWorkItems] = useState([])
@@ -50,6 +51,11 @@ export default function Dashboard({phases, getPhasesList, getWorkitemList, statu
 
         setParsedWorkItems(samArr1);
         break;
+      case 'UPDATE_WORKITEM_PHASE_SUCCESS':
+        getWorkitemList();
+        break;
+      case 'CREATE_WORKITEM_SUCCESS':
+      getWorkitemList();
       default:
         break;
     }
@@ -57,6 +63,8 @@ export default function Dashboard({phases, getPhasesList, getWorkitemList, statu
 
   return (
     <DndProvider backend={HTML5Backend}>
+      
+      <Dimmer active={isLoading}> <Loader active={isLoading}></Loader> </Dimmer>
     <div style={{display:'flex'}}>
       <Backlog pasedPhases={pasedPhases} parsedWorkItems={parsedWorkItems} setParsedWorkItems={setParsedWorkItems} updateWorkitemPhase={updateWorkitemPhase}/>
     </div>

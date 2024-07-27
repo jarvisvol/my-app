@@ -70,6 +70,26 @@ export const phasesReducer = (state = initialState, action) => {
                 isLoading: false,
                 status: action.type,
             }
+        case types.CREATE_WORKITEM:
+            return {
+                ...state,
+                isLoading: true,
+                status: action.type,
+            }
+        case types.CREATE_WORKITEM_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
+                newWorkitem: action.result.data.data.data
+            }
+        case types.CREATE_WORKITEM_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                status: action.type,
+                error: action.error
+            }
         default:
             return state;
     }

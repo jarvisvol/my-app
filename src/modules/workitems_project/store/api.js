@@ -6,7 +6,9 @@ import {
     getWorkitemListSuccess,
     getWorkitemListFailure,
     updateWorkitemPhaseSuccess,
-    updateWorkitemPhaseFailure
+    updateWorkitemPhaseFailure,
+    createWorkItemSuccess,
+    createWorkitemFailure
 
 } from './action'
 
@@ -34,5 +36,14 @@ export  const updateWorkitemPhase = async(payload) => {
         store.dispatch(updateWorkitemPhaseSuccess(result));
     } catch (error) {
         store.dispatch(updateWorkitemPhaseFailure(error))
+    }
+}
+
+export  const createWorkItem = async(payload) => {
+    try {
+        const result = await HTTP.post(`/work-item/create`, payload);
+        store.dispatch(createWorkItemSuccess(result));
+    } catch (error) {
+        store.dispatch(createWorkitemFailure(error))
     }
 }

@@ -12,10 +12,13 @@ export default function WorkitemCard({ itemDetails }) {
   return (
     <div ref={drag} className='work-item-card' 
       style={{
-        height: '30px', width: '200px', opacity: isDragging ? 0.5 : 1, cursor: 'move'
+         width: '200px', opacity: isDragging ? 0.5 : 1, cursor: 'move'
       }} 
     >
+      <div style={{fontWeight: "700", fontSize:'15px'}}>Name</div>
       {itemDetails.name}
+      <div style={{fontWeight: "700", fontSize:'15px'}}> Description</div>
+      <span>{itemDetails.description}</span>
     </div>
   )
 }

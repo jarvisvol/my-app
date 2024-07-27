@@ -9,6 +9,8 @@ import {
     verifyOTPFailure,
     resendOtpSuccess,
     resendOtpFailure,
+    userDetailSuccess,
+    userDetailFailure,
 } from './action'
 
 
@@ -46,6 +48,16 @@ export const resendOtp = async(payload) => {
         store.dispatch(resendOtpSuccess(result));
     } catch (error) {
         store.dispatch(resendOtpFailure(error));
+    }
+
+}
+
+export const getUserDetails = async() => {
+    try {
+        const result = await HTTP.get('user/user-detail');
+        store.dispatch(userDetailSuccess(result));
+    } catch (error) {
+        store.dispatch(userDetailFailure(error.response.data));
     }
 
 }

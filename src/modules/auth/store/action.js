@@ -90,3 +90,25 @@ export const resendOtpFailure = (error) => {
         error: error
     }
 }
+
+export const userDetail = () => {
+    const req = API.getUserDetails();
+    return {
+        type: types.GET_USER_DETAIL,
+        req: req
+    }
+}
+
+export const userDetailSuccess = (result) => {
+    return {
+        type: types.GET_USER_DETAIL_SUCCESS,
+        result: result
+    }
+}
+
+export const userDetailFailure = (error) => {
+    return {
+        type: types.GET_USER_DETAIL_FAILURE,
+        error: error
+    }
+}
